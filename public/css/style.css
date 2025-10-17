@@ -1,0 +1,450 @@
+/* COMMOM CSS */
+body{
+    background: #F6F6F6;
+    font-family: 'Open Sans', sans-serif;
+}
+a,
+a:hover,
+a:focus{
+    text-decoration: none;
+    outline: none;
+}
+ul{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+/* Header Styling */
+#header{
+    background: #F6F6F6;
+}
+.logo img{
+    width: 100%;
+}
+.dropdown{
+    text-align: right;
+    padding: 34px 0;
+}
+.dropdown button{
+    background: #ff0000;
+    border: none;
+    opacity: 0.9;
+    
+}
+.dropdown button:hover{
+    background: #A00000;
+    opacity: 0.9;
+}
+.btn-secondary:not(:disabled):not(.disabled):active:focus, .btn-secondary:not(:disabled):not(.disabled).active:focus, .show > .btn-secondary.dropdown-toggle:focus{
+    box-shadow: none;
+}
+.btn-secondary:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active, .show > .btn-secondary.dropdown-toggle{
+    background: #A00000;
+    opacity: 0.9;
+}
+.btn-secondary:focus, .btn-secondary.focus{
+    border: none;
+    background: #A00000;
+    box-shadow: none;
+    opacity: 0.9;
+}
+#menubar {
+    background: #838282;
+    text-align: center;
+    opacity: 0.9;
+    padding: 10px 0; /* Thêm padding trên dưới */
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    list-style: none;
+}
+
+.menu li {
+    display: inline-flex;
+    align-items: center;
+    margin: 0 10px; /* Khoảng cách giữa các mục */
+}
+
+.menu li a {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 10px 13px;
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Khoảng cách giữa icon và chữ */
+    transition: all 0.3s ease;
+}
+
+.menu li a:hover {
+    background: #fff;
+    color: #A00000;
+    border-radius: 5px; /* Bo góc khi hover */
+}
+
+.menu li a img {
+    width: 20px; /* Điều chỉnh kích thước icon */
+    height: auto;
+}
+/* Footer Styling */
+#footer{
+    background: #A00000;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    opacity: 0.9;
+}
+#footer span,
+#footer a{
+    color: #fff;
+}
+/* ADMIN CONTENT */
+/* ----- Tiêu đề chính ----- */
+.admin-heading {
+    font-size: 30px;
+    font-weight: 600;
+    color: #0E0E0E;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+.admin-heading:after {
+    content: "";
+    background: #A00000;
+    width: 80px;
+    height: 3px;
+    opacity: 0.9;
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+}
+
+/* ----- Vùng hiển thị ----- */
+#admin-content {
+    min-height: 100vh;
+    padding: 30px;
+    background: #f8f9fa;
+}
+
+/* ----- Card hiển thị số liệu ----- */
+.custom-card {
+    width: 18rem;
+    margin: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    background: #fff;
+}
+.custom-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+.card-text.count {
+    font-size: 30px;
+    font-weight: bold;
+    color: #A00000;
+}
+.card-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #555;
+}
+
+/* ----- Nút thêm mới ----- */
+.add-new {
+    background: #36921f;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    border: 2px solid transparent;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+.add-new:hover {
+    background: #fff;
+    color: #A00000;
+    border: 2px solid #A00000;
+    box-shadow: 0px 4px 8px rgba(160, 0, 0, 0.4);
+}
+
+/* ----- Bảng hiển thị ----- */
+.content-table {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+}
+.content-table thead {
+    background: #444;
+    color: #fff;
+}
+.content-table th {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 12px;
+    border: 1px solid #000;
+}
+.content-table tbody tr:nth-child(odd) {
+    background: #f2f2f2;
+}
+.content-table tbody tr:nth-child(even) {
+    background: #ffffff;
+}
+.content-table tbody tr:hover {
+    background: rgba(160, 0, 0, 0.1);
+    transition: 0.3s;
+}
+.content-table tbody td {
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 12px;
+}
+.content-table tbody td:nth-child(2),
+.content-table tbody td:nth-child(5) {
+    text-align: left;
+}
+
+/* ----- Phân trang ----- */
+.pagination {
+    text-align: center;
+}
+.pagination li {
+    display: inline-block;
+    margin: 5px;
+}
+.pagination li a {
+    background: #A00000;
+    color: #fff;
+    font-size: 14px;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+.pagination li.active > a {
+    background: #900000;
+}
+.pagination li a:hover {
+    background: #fff;
+    color: #A00000;
+    border: 1px solid #A00000;
+}
+
+/* ADD AUTHOR */
+.yourform{
+    background: lightgrey;
+    padding: 25px;
+    box-shadow: 0 4px 5px rgba(0,0,0,0.5);
+}
+.form-group label{
+    color: #0E0E0E;
+    font-weight: 600;
+}
+.form-group .form-control{
+    font-size: 14px;
+}
+/* ADD CATEGORY */
+.radio{
+    padding: 3px 0;
+}
+.radio input[type="radio"]{
+    margin-right: 8px;
+}
+/* ADMIN LOGIN */
+#wrapper-admin{
+    padding: 100px 0 0;
+}
+.border.border-danger{
+    border: 5px solid #A00000 !important;
+    opacity: 0.9;
+    margin: 0 0 20px;
+}
+.heading{
+    font-size: 20px;
+    margin: 0 0 20px;
+    display: inline-block;
+    position: relative;
+}
+.heading:after{
+    content: "";
+    background: #A00000;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+}
+/* MODAL BOX */
+#modal{
+  background: rgba(0,0,0,0.7);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  display: none;
+}
+#modal-form{
+  background: #fff;
+  width: 30%;
+  position: relative;
+  top: 20%;
+  left: calc(50% - 15%);
+  padding: 15px;
+  border-radius: 4px;
+}
+#modal-form h2{
+  margin: 0 0 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #000;
+  display: block;
+}
+#close-btn{
+  background: red;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  cursor: pointer;
+}
+
+.card-body{
+  background: #818080;
+  opacity: 0.9;
+  padding: 40px 20px;
+  border-radius: 12px;
+}
+
+.card-body .card-text{
+  color: #000000;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 40px;
+  margin: 0 0 10px;
+}
+.card-body .card-title{
+  color: #000000;
+}
+
+#modal-form table tr{
+  border-bottom: 1px solid grey;
+}
+/* ========== FORM ADD BOOK ========== */
+.yourform {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: 0.3s ease-in-out;
+}
+
+.yourform:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* FORM LABEL */
+.form-group label {
+    font-weight: bold;
+    color: #333;
+}
+
+/* INPUT & SELECT */
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease-in-out;
+}
+
+.form-control:focus {
+    border-color: #A00000;
+    box-shadow: 0px 0px 5px rgba(160, 0, 0, 0.5);
+}
+
+/* BUTTON */
+.btn-danger {
+    background: #A00000;
+    border: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-danger:hover {
+    background: #8b0000;
+    transform: scale(1.05);
+}
+
+/* ALERT ERROR */
+.alert-danger {
+    background: rgba(255, 0, 0, 0.1);
+    border: 1px solid red;
+    color: red;
+    padding: 5px;
+    border-radius: 5px;
+}
+/* ========== BẢNG DANH SÁCH SÁCH ========== */
+.content-table {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.content-table th {
+    background: #4e4d4d;
+    color: #fff;
+    padding: 12px;
+    font-size: 14px;
+}
+
+.content-table tbody tr:nth-child(odd) {
+    background: #f8f9fa;
+}
+
+.content-table tbody tr:hover {
+    background: #e9ecef;
+}
+
+/* NÚT SỬA & XÓA */
+.btn-sm {
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+.btn-primary {
+    background: #28a745;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+.btn-primary:hover {
+    background: #218838;
+}
+
+.btn-danger {
+    background: #dc3545;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+.btn-danger:hover {
+    background: #c82333;
+}
